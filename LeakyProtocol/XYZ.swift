@@ -54,6 +54,5 @@ class ZClass {
         
         return something
     }
-    
 }
 
