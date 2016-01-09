@@ -11,7 +11,6 @@ import RxSwift
 import RxCocoa
 
 class ViewController: UIViewController {
-
     
     @IBOutlet weak var tapMeButton: UIButton!
     
@@ -32,6 +31,12 @@ class ViewController: UIViewController {
             }.addDisposableTo(self.disposeBag)
             
         }.addDisposableTo(disposeBag)
+    }
+    
+    @IBAction func doneWasTapped(sender: AnyObject) {
+        
+        self.dismissViewControllerAnimated(true, completion: nil)
+        
     }
 }
 
