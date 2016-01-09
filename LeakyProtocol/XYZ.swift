@@ -44,7 +44,6 @@ extension YProtocol {
     }
 }
 
-// forces the need for self to be used. Some kind of manageable thing.
 class ZClass {
 
     static let shared = ZClass()
