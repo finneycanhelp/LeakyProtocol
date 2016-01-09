@@ -33,7 +33,7 @@ extension YProtocol {
         
         return Observable.create({ (observer) -> Disposable in
 
-            // this "self" is the suspicious part. Is this creating a strong retain cycle reference to X?
+            // this "self" is the suspicious part. Is this creating a retain cycle reference?
             let somethingReturned = self.myZ.addSomething(stringToAdd)
             
             observer.onNext(somethingReturned)
