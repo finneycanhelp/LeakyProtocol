@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 
 // like a View Model
-struct XStruct: YProtocol {
+class XClass: YProtocol {
     
     var myZ: ZClass = ZClass.shared
     
