@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 
 // like a View Model
-class XClass: YProtocol {
+struct XStruct: YProtocol {
     
     var myZ: ZClass = ZClass.shared
     
@@ -31,10 +31,17 @@ extension YProtocol {
         // some string is obtained somehow.
         let stringToAdd = NSUUID().UUIDString
         
-        return myZ.addSomething(stringToAdd)
-        
-    }
+        return Observable.create({ (observer) -> Disposable in
 
+            // this "self" is the suspicious part. Is this creating a strong retain cycle reference to X?
+            let somethingReturned = self.myZ.addSomething(stringToAdd)
+            
+            observer.onNext(somethingReturned)
+            observer.onCompleted()
+            
+            return NopDisposable.instance
+        })
+    }
 }
 
 // forces the need for self to be used. Some kind of manageable thing.
@@ -42,11 +49,11 @@ class ZClass {
 
     static let shared = ZClass()
         
-    func addSomething(something: String) -> Observable<String> {
+    func addSomething(something: String) -> String {
         
         print("The \(something) was added somewhere.")
         
-        return Observable.just(something)
+        return something
     }
     
 }

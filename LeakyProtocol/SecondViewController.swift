@@ -16,7 +16,7 @@ class SecondViewController: UIViewController {
     
     let disposeBag = DisposeBag()
 
-    let x: XClass = XClass()
+    let x: XStruct = XStruct()
 
     override func viewDidLoad() {
         super.viewDidLoad()
