@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41188402168EC96B058F78BF /* Pods_LeakyProtocol.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE5E852CFD2204120F59670 /* Pods_LeakyProtocol.framework */; };
 		C6D62D3C1C416C0A00EAFF0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D62D3B1C416C0A00EAFF0E /* AppDelegate.swift */; };
 		C6D62D3E1C416C0A00EAFF0E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D62D3D1C416C0A00EAFF0E /* ViewController.swift */; };
 		C6D62D411C416C0A00EAFF0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6D62D3F1C416C0A00EAFF0E /* Main.storyboard */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01CE6D929F7F559D686A5E76 /* Pods-LeakyProtocol.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeakyProtocol.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LeakyProtocol/Pods-LeakyProtocol.debug.xcconfig"; sourceTree = "<group>"; };
+		1BE5E852CFD2204120F59670 /* Pods_LeakyProtocol.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeakyProtocol.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		90E0C2DAE24E28D002455F6F /* Pods-LeakyProtocol.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeakyProtocol.release.xcconfig"; path = "Pods/Target Support Files/Pods-LeakyProtocol/Pods-LeakyProtocol.release.xcconfig"; sourceTree = "<group>"; };
 		C6D62D381C416C0A00EAFF0E /* LeakyProtocol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeakyProtocol.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6D62D3B1C416C0A00EAFF0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6D62D3D1C416C0A00EAFF0E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41188402168EC96B058F78BF /* Pods_LeakyProtocol.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06AF3B987CC2A362782FCA01 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				01CE6D929F7F559D686A5E76 /* Pods-LeakyProtocol.debug.xcconfig */,
+				90E0C2DAE24E28D002455F6F /* Pods-LeakyProtocol.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		ABB37A6258DE9AFAF3BB0A96 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1BE5E852CFD2204120F59670 /* Pods_LeakyProtocol.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C6D62D2F1C416C0A00EAFF0E = {
 			isa = PBXGroup;
 			children = (
 				C6D62D3A1C416C0A00EAFF0E /* LeakyProtocol */,
 				C6D62D391C416C0A00EAFF0E /* Products */,
+				06AF3B987CC2A362782FCA01 /* Pods */,
+				ABB37A6258DE9AFAF3BB0A96 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C6D62D4A1C416C0A00EAFF0E /* Build configuration list for PBXNativeTarget "LeakyProtocol" */;
 			buildPhases = (
+				2BA727C9AE4B709A329E1500 /* Check Pods Manifest.lock */,
 				C6D62D341C416C0A00EAFF0E /* Sources */,
 				C6D62D351C416C0A00EAFF0E /* Frameworks */,
 				C6D62D361C416C0A00EAFF0E /* Resources */,
+				12B8386B8DD1FC418B9849C3 /* Embed Pods Frameworks */,
+				267DADD05D2CEF9C5817E643 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12B8386B8DD1FC418B9849C3 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LeakyProtocol/Pods-LeakyProtocol-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		267DADD05D2CEF9C5817E643 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LeakyProtocol/Pods-LeakyProtocol-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2BA727C9AE4B709A329E1500 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C6D62D341C416C0A00EAFF0E /* Sources */ = {
@@ -249,6 +324,7 @@
 		};
 		C6D62D4B1C416C0A00EAFF0E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01CE6D929F7F559D686A5E76 /* Pods-LeakyProtocol.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LeakyProtocol/Info.plist;
@@ -260,6 +336,7 @@
 		};
 		C6D62D4C1C416C0A00EAFF0E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90E0C2DAE24E28D002455F6F /* Pods-LeakyProtocol.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LeakyProtocol/Info.plist;
@@ -288,6 +365,7 @@
 				C6D62D4C1C416C0A00EAFF0E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
