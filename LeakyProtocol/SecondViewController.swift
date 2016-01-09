@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class ViewController: UIViewController {
+class SecondViewController: UIViewController {
     
     @IBOutlet weak var tapMeButton: UIButton!
     
