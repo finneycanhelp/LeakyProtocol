@@ -8,12 +8,18 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var tapMeButton: UIButton!
+    
     let x: XClass = XClass()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         
     }
